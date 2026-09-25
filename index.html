@@ -2,28 +2,95 @@
 <html lang="es">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Studeo · Información legal</title>
+<title>Eidora · Tus apuntes, convertidos en tarjetas</title>
+<meta name="description" content="Pega tus apuntes y Eidora crea tarjetas de pregunta y respuesta. Luego te las enseña justo cuando estás a punto de olvidarlas. Para opositores y universitarios.">
+<meta property="og:title" content="Eidora · Tus apuntes, convertidos en tarjetas">
+<meta property="og:description" content="Repasa con repetición espaciada. Para opositores y universitarios.">
+<meta property="og:image" content="https://eidora.app/icon.png">
+<meta property="og:url" content="https://eidora.app/">
+<link rel="icon" href="/favicon.png">
+<link rel="apple-touch-icon" href="/icon.png">
 <style>
-  :root { color-scheme: light dark; }
-  body {
-    max-width: 34rem; margin: 0 auto; padding: 4rem 1.25rem;
-    font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    color: #1a1a1a; background: #fff;
+  :root {
+    --verde: #17302B; --crema: #F4F4EF; --naranja: #C87A30; --hoja: #557A3F;
+    --texto: #1c2a27; --suave: #5b6a66;
   }
-  h1 { font-size: 1.6rem; margin-bottom: .25rem; }
-  p.sub { color: #666; margin-top: 0; }
-  ul { list-style: none; padding: 0; margin-top: 2rem; }
-  li { margin: .6rem 0; }
-  a { color: #17302B; font-weight: 600; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--crema); color: var(--texto);
+    font: 17px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  }
+  header { background: var(--verde); color: #F4F4EF; padding: 4rem 1.25rem 4.5rem; }
+  .ancho { max-width: 40rem; margin: 0 auto; }
+  .marca { display: flex; align-items: center; gap: .75rem; }
+  .marca img { width: 56px; height: 56px; border-radius: 14px; }
+  .marca span { font-size: 1.6rem; font-weight: 700; letter-spacing: .01em; }
+  h1 { font-size: clamp(1.9rem, 6vw, 2.6rem); line-height: 1.15; margin: 2.25rem 0 1rem; }
+  header p { font-size: 1.1rem; color: #d9e0dc; margin: 0; }
+  .pronto {
+    display: inline-block; margin-top: 2rem; padding: .55rem 1rem; border-radius: 999px;
+    background: var(--naranja); color: #fff; font-weight: 600; font-size: .95rem;
+  }
+  main { padding: 3rem 1.25rem 1rem; }
+  .punto { display: flex; gap: 1rem; margin-bottom: 1.75rem; }
+  .punto .icono {
+    flex: none; width: 2.25rem; height: 2.25rem; border-radius: 50%;
+    background: var(--hoja); color: #fff; display: grid; place-items: center; font-weight: 700;
+  }
+  .punto h2 { font-size: 1.1rem; margin: 0 0 .2rem; }
+  .punto p { margin: 0; color: var(--suave); }
+  .para { margin: 2.5rem 0 0; padding: 1.25rem; border-left: 4px solid var(--naranja); background: #fff; border-radius: 6px; }
+  footer { padding: 2.5rem 1.25rem 3rem; color: var(--suave); font-size: .9rem; }
+  footer a { color: var(--verde); }
   @media (prefers-color-scheme: dark) {
-    body { color: #e8e8e8; background: #14171a; }
-    p.sub { color: #999; }
-    a { color: #8fd3c0; }
+    :root { --crema: #111a18; --texto: #e6ebe9; --suave: #9fb0ab; }
+    .para { background: #182421; }
+    footer a { color: #8fd3c0; }
   }
 </style>
-<h1>Studeo</h1>
-<p class="sub">App de estudio con repetición espaciada.</p>
-<ul>
-  <li><a href="privacidad.html">Política de privacidad</a></li>
-  <li><a href="terminos.html">Términos de uso</a></li>
-</ul>
+<header>
+  <div class="ancho">
+    <div class="marca"><img src="/icon.png" alt=""><span>Eidora</span></div>
+    <h1>Tus apuntes, convertidos en tarjetas.</h1>
+    <p>Pega tus apuntes y Eidora crea tarjetas de pregunta y respuesta. Después te las enseña justo
+      cuando estás a punto de olvidarlas.</p>
+    <span class="pronto">Muy pronto en App Store y Google Play</span>
+  </div>
+</header>
+<main>
+  <div class="ancho">
+    <div class="punto">
+      <div class="icono">1</div>
+      <div>
+        <h2>Con tus apuntes, no con un temario ajeno</h2>
+        <p>Pegas el texto que ya tienes y la app lo convierte en tarjetas. Puedes editarlas o añadir
+          las tuyas a mano.</p>
+      </div>
+    </div>
+    <div class="punto">
+      <div class="icono">2</div>
+      <div>
+        <h2>Repasa solo lo que toca hoy</h2>
+        <p>Con repetición espaciada: lo que ya sabes vuelve cada vez más tarde, y lo que fallas vuelve
+          pronto. Menos tiempo, más memoria.</p>
+      </div>
+    </div>
+    <div class="punto">
+      <div class="icono">3</div>
+      <div>
+        <h2>Comparte mazos con tu clase</h2>
+        <p>Publica tus mazos en la comunidad y busca los de otros estudiantes de tu universidad y tu
+          carrera.</p>
+      </div>
+    </div>
+    <p class="para">Pensada para <strong>opositores</strong> y <strong>universitarios</strong> de
+      cualquier carrera.</p>
+  </div>
+</main>
+<footer>
+  <div class="ancho">
+    <a href="/privacidad">Política de privacidad</a> · <a href="/terminos">Términos de uso</a> ·
+    <a href="mailto:hola@eidora.app">hola@eidora.app</a>
+  </div>
+</footer>
+</html>

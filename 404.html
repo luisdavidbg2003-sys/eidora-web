@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="es">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Eidora</title>
+<link rel="icon" href="/favicon.png">
+<!--
+  GitHub Pages no puede tener una página por cada mazo, así que los enlaces
+  de «Compartir mazo» (https://eidora.app/mazo/<id>) caen en esta página de
+  «no encontrado». El script de abajo mira la dirección: si es de un mazo,
+  enseña el botón para abrirlo en la app (eidora://mazo/<id>); si no, un
+  aviso normal de página no encontrada.
+  Cuando la app esté en las tiendas y se configuren los "universal links",
+  el móvil abrirá la app directamente sin pasar por aquí.
+-->
+<style>
+  :root { --verde: #17302B; --crema: #F4F4EF; --naranja: #C87A30; --suave: #5b6a66; }
+  body {
+    margin: 0; min-height: 100vh; display: grid; place-items: center; text-align: center;
+    background: var(--verde); color: var(--crema); padding: 2rem 1.25rem; box-sizing: border-box;
+    font: 17px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  }
+  .caja { max-width: 26rem; }
+  img { width: 72px; height: 72px; border-radius: 18px; }
+  h1 { font-size: 1.6rem; line-height: 1.2; margin: 1.25rem 0 .75rem; }
+  p { color: #d9e0dc; margin: 0 0 1rem; }
+  .boton {
+    display: inline-block; margin: 1rem 0 1.5rem; padding: .8rem 1.5rem; border-radius: 999px;
+    background: var(--naranja); color: #fff; font-weight: 700; text-decoration: none;
+  }
+  .nota { font-size: .9rem; color: #a9b8b3; }
+  a { color: #8fd3c0; }
+  [hidden] { display: none; }
+</style>
+<div class="caja">
+  <img src="/icon.png" alt="Eidora">
+
+  <div id="mazo" hidden>
+    <h1>Te han compartido un mazo de estudio</h1>
+    <p>Ábrelo en Eidora para verlo y añadirlo a tus mazos.</p>
+    <a class="boton" id="abrir" href="/">Abrir en Eidora</a>
+    <p class="nota">¿Todavía no tienes la app? Muy pronto en App Store y Google Play.
+      <a href="/">Qué es Eidora</a></p>
+  </div>
+
+  <div id="otra">
+    <h1>Esta página no existe</h1>
+    <p><a href="/">Ir a la página de Eidora</a></p>
+  </div>
+</div>
+<script>
+  // Solo se aceptan ids con letras, números y guiones (como los de la base
+  // de datos), para no meter en el enlace nada que venga raro en la dirección.
+  var trozo = location.pathname.match(/^\/mazo\/([a-zA-Z0-9-]+)\/?$/);
+  if (trozo) {
+    document.title = 'Mazo compartido · Eidora';
+    document.getElementById('abrir').href = 'eidora://mazo/' + trozo[1];
+    document.getElementById('mazo').hidden = false;
+    document.getElementById('otra').hidden = true;
+  }
+</script>
+</html>
