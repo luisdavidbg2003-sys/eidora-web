@@ -8,6 +8,7 @@ la app está en un repositorio **privado** aparte.
 |---|---|
 | `index.html` | La portada |
 | `privacidad.html`, `terminos.html` | Política de privacidad y términos de uso: las tiendas exigen una dirección web para ellos. Se ven en `eidora.app/privacidad` y `eidora.app/terminos` |
+| `borrar-cuenta.html` | Cómo borrar la cuenta, **también sin la app** (escribiendo a `privacidad@eidora.app`). **Google Play la exige** y su dirección, `eidora.app/borrar-cuenta`, se pone en Play Console. Escrita a mano, no se genera: si cambia cómo se borra la cuenta en la app, hay que cambiarla |
 | `404.html` | La página de «no encontrado». **Además recibe los enlaces de «Compartir mazo»** (`eidora.app/mazo/<id>`) y enseña el botón para abrir el mazo en la app |
 | `CNAME` | Le dice a GitHub Pages que la web va en `eidora.app`. **No borrarlo** |
 | `.nojekyll` | Que GitHub publique los archivos tal cual, sin procesarlos (hará falta para la carpeta `.well-known` de los enlaces universales) |
