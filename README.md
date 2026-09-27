@@ -12,6 +12,8 @@ la app está en un repositorio **privado** aparte.
 | `CNAME` | Le dice a GitHub Pages que la web va en `eidora.app`. **No borrarlo** |
 | `.nojekyll` | Que GitHub publique los archivos tal cual, sin procesarlos (hará falta para la carpeta `.well-known` de los enlaces universales) |
 | `icon.png`, `favicon.png` | Copias de los iconos de la app |
+| `compartir.png` | La imagen de 1200×630 que sale al pegar un enlace de la web en WhatsApp, redes, etc. (etiquetas `og:image` de `index.html` y `404.html`). Se dibujó el 27/09/2026 a partir de `icon.png`, con los colores de la web |
+| `robots.txt`, `sitemap.xml` | Para buscadores: todo se puede indexar, y la lista de páginas. **Si se añade una página, hay que añadirla al `sitemap.xml`** |
 
 ## No editar los textos legales a mano
 

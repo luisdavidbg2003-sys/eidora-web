@@ -1,0 +1,6 @@
+# Todo se puede indexar. La página de «no encontrado» (y los enlaces de
+# mazos compartidos, que caen en ella) lleva su propio «noindex».
+User-agent: *
+Allow: /
+
+Sitemap: https://eidora.app/sitemap.xml
