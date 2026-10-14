@@ -1,0 +1,12 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["YMCCGNDGS9.es.eidora.app"],
+        "components": [
+          { "/": "/mazo/*", "comment": "Los mazos compartidos abren la app directamente" }
+        ]
+      }
+    ]
+  }
+}
